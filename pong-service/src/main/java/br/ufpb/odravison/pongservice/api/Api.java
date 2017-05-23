@@ -18,14 +18,14 @@ public class Api {
     
     protected Logger logger = LoggerFactory.getLogger(Api.class.getName());
     
-    @RequestMapping(method=RequestMethod.GET, path="/pong-data")
+    @RequestMapping(method=RequestMethod.GET, value="/pong-data")
     public Data getPongData(){
         logger.info("Getting Data by pong-service");
         
         return new Data();
     }
     
-    @RequestMapping(method=RequestMethod.GET, path="/pong-data/pong-data-from-ping")
+    @RequestMapping(method=RequestMethod.GET, value="/pong-data/pong-data-from-ping")
     public Data getDataFromPing(){
         
         logger.info("Getting Data from ping-service by pong-service");

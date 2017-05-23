@@ -17,7 +17,7 @@ public class Api {
     private PongServiceClient pongServiceClient;
     
     
-    @RequestMapping(method = RequestMethod.GET, path = "/ping-data")
+    @RequestMapping(method = RequestMethod.GET, value = "/ping-data")
     public Data getPingData(){
         
         logger.info("Getting Data by ping-service");
@@ -25,7 +25,7 @@ public class Api {
         return new Data();
     }
     
-    @RequestMapping(method = RequestMethod.GET, path = "/ping-data/ping-data-from-pong/")
+    @RequestMapping(method = RequestMethod.GET, value = "/ping-data/ping-data-from-pong/")
     public Data getDataFromPong(){
         
         logger.info("Getting Data from pong-service by ping-service");
