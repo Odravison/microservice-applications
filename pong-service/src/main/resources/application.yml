@@ -1,5 +1,5 @@
 server:  
-  port: ${PING_SERVICE_PORT:3333}
+  port: ${PONG_SERVICE_PORT:3333}
 
 eureka:  
   client:

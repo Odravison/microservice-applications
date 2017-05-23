@@ -13,10 +13,10 @@ zuul:
   prefix: /api
   routes:
     ping:
-      path: /**
+      path: /ping-data/**
       serviceId: ping-service
     pong:
-      path: /**
+      path: /pong-data/**
       serviceId: pong-service
 
 ribbon:
