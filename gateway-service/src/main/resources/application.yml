@@ -13,11 +13,11 @@ zuul:
   prefix: /api
   routes:
     data:
-      path: /data/**
-      serviceId: data-service
-#    customer:
-#      path: /customer/**
-#      serviceId: customer-service
+      path: /ping-data/**
+      serviceId: ping-service
+    customer:
+      path: /pong-data/**
+      serviceId: pong-service
 
 ribbon:
   eureka:
