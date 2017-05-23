@@ -15,7 +15,7 @@ zuul:
     data:
       path: /ping-data/**
       serviceId: ping-service
-    customer:
+    pong:
       path: /pong-data/**
       serviceId: pong-service
 
