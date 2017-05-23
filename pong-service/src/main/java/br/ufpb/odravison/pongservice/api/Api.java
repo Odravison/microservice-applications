@@ -3,6 +3,7 @@ package br.ufpb.odravison.pongservice.api;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,17 +20,17 @@ public class Api {
     protected Logger logger = LoggerFactory.getLogger(Api.class.getName());
     
     @RequestMapping(method=RequestMethod.GET, value="/pong-data")
-    public Data getPongData(){
+    public ResponseEntity<Data> getPongData(){
         logger.info("Getting Data by pong-service");
         
-        return new Data();
+        return ResponseEntity.ok(new Data());
     }
     
     @RequestMapping(method=RequestMethod.GET, value="/pong-data/pong-data-from-ping")
-    public Data getDataFromPing(){
+    public ResponseEntity<Data> getDataFromPing(){
         
         logger.info("Getting Data from ping-service by pong-service");
-        Data result = null;
+        ResponseEntity<Data> result = null;
         
         result = pingServiceClient.getData();
         
