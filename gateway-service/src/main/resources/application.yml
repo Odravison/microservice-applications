@@ -27,7 +27,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://${EUREKA_IP}:${EUREKA_PORT}/eureka/
-    registerWithEureka: true
+    registerWithEureka: false
 
 server:
   port: 8765
