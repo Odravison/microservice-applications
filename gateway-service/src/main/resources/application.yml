@@ -11,13 +11,13 @@ endpoints:
 
 zuul:
   prefix: /api
-#  routes:
-#    ping:
-#      path: /ping-data/**
-#      serviceId: ping-service
-#    pong:
-#      path: /pong-data/**
-#      serviceId: pong-service
+  routes:
+    ping:
+      path: /**
+      serviceId: ping-service
+    pong:
+      path: /**
+      serviceId: pong-service
 
 ribbon:
   eureka:
