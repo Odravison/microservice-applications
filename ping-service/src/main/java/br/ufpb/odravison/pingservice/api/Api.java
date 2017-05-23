@@ -20,7 +20,7 @@ public class Api {
     private PongServiceClient pongServiceClient;
     
     
-    @RequestMapping(method = RequestMethod.GET, value = "/ping-data")
+    @RequestMapping(method = RequestMethod.GET, value = "/")
     public ResponseEntity<Data> getPingData(){
         
         logger.info("Getting Data by ping-service");
@@ -28,7 +28,7 @@ public class Api {
         return ResponseEntity.ok(new Data());
     }
     
-    @RequestMapping(method = RequestMethod.GET, value = "/ping-data/ping-data-from-pong/")
+    @RequestMapping(method = RequestMethod.GET, value = "/ping-data-from-pong/")
     public ResponseEntity<Data> getDataFromPong(){
         
         logger.info("Getting Data from pong-service by ping-service");
