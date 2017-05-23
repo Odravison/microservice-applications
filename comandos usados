@@ -1,0 +1,14 @@
+DISCOVERY SERVICE
+env EUREKA_PORT=8761 java -jar target/discovery-service.jar > discovery-service.log 2>&1 &
+
+GATEWAY SERVICE
+env EUREKA_IP=localhost EUREKA_PORT=8761 java -jar target/gateway-service.jar > gateway-service.log 2>&1 &
+
+PING SERVICE
+env EUREKA_IP=54.145.194.167 EUREKA_PORT=8761 PING_SERVICE_PORT=2222 java -jar target/ping-service.jar > ping-service.log 2>&1 &
+
+PONG SERVICE
+env EUREKA_IP=54.145.194.167 EUREKA_PORT=8761 PONG_SERVICE_PORT=3333 java -jar target/pong-service.jar > pong-service.log 2>&1 &
+
+
+
