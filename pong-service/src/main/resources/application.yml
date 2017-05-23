@@ -8,6 +8,7 @@ eureka:
   instance:
     metadata-map:
       instanceId: pong-service
+      serviceId: pong-service
     leaseRenewalIntervalInSeconds: 1
     leaseExpirationDurationInSeconds: 2
           

@@ -18,6 +18,7 @@ eureka:
   instance:
     metadata-map:
       instanceId: ping-service
+      serviceId: ping-service
     leaseRenewalIntervalInSeconds: 1
     leaseExpirationDurationInSeconds: 2
       
