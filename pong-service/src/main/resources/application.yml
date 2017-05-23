@@ -4,7 +4,7 @@ server:
 eureka:  
   client:
     serviceUrl:
-      defaultZone: ${vcap.services.discovery-service.credentials.uri:http://127.0.0.1:8761}/eureka/
+      defaultZone: http://${vcap.services.discovery-service.credentials.uri:http://127.0.0.1:8761}/eureka/
   instance:
     metadata-map:
       instanceId: pong-service
