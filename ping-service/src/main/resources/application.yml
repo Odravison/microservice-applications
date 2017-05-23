@@ -14,7 +14,7 @@ spring:
 eureka:  
   client:
     serviceUrl:
-      defaultZone: http://${EUREKA_IP}:${EUREKA_PORT}/eureka/
+      defaultZone: ${vcap.services.discovery-service.credentials.uri:http://127.0.0.1:8761}/eureka/
   instance:
     metadata-map:
       instanceId: ping-service
