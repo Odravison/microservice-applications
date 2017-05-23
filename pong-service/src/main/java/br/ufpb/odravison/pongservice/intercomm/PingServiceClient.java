@@ -10,7 +10,7 @@ import br.ufpb.odravison.pongservice.model.Data;
 @FeignClient("ping-service")
 public interface PingServiceClient {
     
-    @RequestMapping(method = RequestMethod.GET, value = "/ping-data", consumes = "application/json")
+    @RequestMapping(method = RequestMethod.GET, value = "/ping-data")
     ResponseEntity<Data> getData();
 
 }
