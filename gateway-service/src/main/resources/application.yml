@@ -12,7 +12,7 @@ endpoints:
 zuul:
   prefix: /api
   routes:
-    data:
+    ping:
       path: /ping-data/**
       serviceId: ping-service
     pong:

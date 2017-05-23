@@ -16,6 +16,8 @@ eureka:
     serviceUrl:
       defaultZone: http://${EUREKA_IP}:${EUREKA_PORT}/eureka/
   instance:
+    metadata-map:
+      instanceId: ping-service
     leaseRenewalIntervalInSeconds: 1
     leaseExpirationDurationInSeconds: 2
       
