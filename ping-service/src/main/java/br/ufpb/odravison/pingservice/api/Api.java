@@ -23,21 +23,35 @@ public class Api {
     @RequestMapping(method = RequestMethod.GET, value = "/")
     public ResponseEntity<Data> getPingData(){
         
-        logger.info("Getting Data by ping-service");
+        logger.info("Getting Data by accessing GETDATALVL1 On Ping-service");
         
         return ResponseEntity.ok(new Data());
     }
     
-    @RequestMapping(method = RequestMethod.GET, value = "/ping-data-from-pong")
-    public ResponseEntity<Data> getDataFromPong(){
+    @RequestMapping(method = RequestMethod.GET, value = "/lvl2")
+    public ResponseEntity<Data> getDataLvl2(){
         
-        logger.info("Getting Data from pong-service by ping-service");
+        logger.info("Getting Data by accessing GETDATALVL2 On Ping-service");
         
         ResponseEntity<Data> result = null;
         
-        result = pongServiceClient.getData();
+        result = pongServiceClient.getDataLvl2();
         
-        logger.info("Got Data from pong-service by ping-service {}", result);
+        logger.info("Got Data by accessed GETDATALVL2 On Ping-service {}", result);
+        
+        return result;
+    }
+    
+    @RequestMapping(method = RequestMethod.GET, value = "/lvl3")
+    public ResponseEntity<Data> getDataFromPong(){
+        
+        logger.info("Getting Data from pong-service by ping-service On Ping-service");
+        
+        ResponseEntity<Data> result = null;
+        
+        result = pongServiceClient.getDataLvl3();
+        
+        logger.info("Got Data from pong-service by ping-service On Ping-service {}", result);
         
         return result;
     }

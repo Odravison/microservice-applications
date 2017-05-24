@@ -11,6 +11,6 @@ import br.ufpb.odravison.pongservice.model.Data;
 public interface PingServiceClient {
     
     @RequestMapping(method = RequestMethod.GET, value = "/")
-    ResponseEntity<Data> getData();
+    ResponseEntity<Data> getDataLvl2();
 
 }

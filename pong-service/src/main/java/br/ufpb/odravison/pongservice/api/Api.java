@@ -21,20 +21,20 @@ public class Api {
     
     @RequestMapping(method=RequestMethod.GET, value="/")
     public ResponseEntity<Data> getPongData(){
-        logger.info("Getting Data by pong-service");
+        logger.info("Getting Data by accessing GETDATALVL1 On Pong-service");
         
         return ResponseEntity.ok(new Data());
     }
     
-    @RequestMapping(method=RequestMethod.GET, value="/pong-data-from-ping")
+    @RequestMapping(method=RequestMethod.GET, value="/lvl2")
     public ResponseEntity<Data> getDataFromPing(){
         
-        logger.info("Getting Data from ping-service by pong-service");
+        logger.info("Getting Data by accessing GETDATALVL2 On Ping-service");
         ResponseEntity<Data> result = null;
         
-        result = pingServiceClient.getData();
+        result = pingServiceClient.getDataLvl2();
         
-        logger.info("Got Data from ping-service by pong-service {}", result);
+        logger.info("Got Data by accessed GETDATALVL2 On Pong-service {}", result);
         
         return result;
     }
